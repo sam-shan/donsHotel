@@ -1,0 +1,389 @@
+/* -------------------------------------------------------------------
+Stylesheet for Don's Beach Hotel
+----------------------------------------------------------------------
+Author:
+Version: 1.0;
+Date: MAY 2015;
+Origin: LK;
+----------------------------------------------------------------------
+01. General Styles
+
+02. Basic Elements
+  1. Clearfix
+  2. General Classes
+  3. Icon Fonts
+  4. List Types
+  5. divider
+  6. buttons
+
+03. Header
+  1. Logo
+  2. Right Links
+
+04. Home slider
+  1. Fullwidth Owl Slider styles
+
+05. Main
+  1. Content
+  2. Boxed
+    - bg color styling (white, green, grey, image)
+  3. Tabs
+  4. FAQs
+  
+06. Footer 
+  1. Widgets
+  2. Logo In Footer
+  3. Bottom Footer
+
+07. Media Queries
+
+
+font-family: 'Cinzel', serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+/* ---------------------------------------------------------------------- */
+/*  01. General
+/* ---------------------------------------------------------------------- */
+  body
+  {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    background: #f3f0eb;
+    -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+    font-style: normal;
+  }
+
+  .header-in.clearfix {
+    display: inherit;
+  }
+
+  .no-padding
+  {
+    padding: 0;
+  }
+
+  .no-padding-left
+  {
+    padding-left: 0;
+  }
+
+  .no-padding-right
+  {
+    padding-right: 0;
+  }
+
+  .no-padding-top
+  {
+    padding-top: 0;
+  }
+
+  .no-padding-bottom
+  {
+    padding-bottom: 0;
+  }
+
+  .auxiliary-label 
+  {
+    position: absolute !important;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  textarea
+  {
+    resize: vertical;
+  }
+
+
+/* ---------------------------------------------------------------------- */
+/*  02. Basic Elements
+/* ---------------------------------------------------------------------- */
+
+    /* -------------------------------------------------- */
+    /*  Clearfix
+    /* -------------------------------------------------- */
+
+    .clear {   
+      clear: both;
+      display: block;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+    }
+    
+    .clearfix:after {
+      clear: both;
+      display: block;
+      visibility: hidden;
+      height: 0;
+      content: ".";
+    }
+
+
+    /* -------------------------------------------------- */
+    /*  Typography
+    /* -------------------------------------------------- */
+    
+    p,a
+    {
+      font-size: 18px;
+      outline: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    a
+    {
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+      -webkit-backface-visibility: hidden;
+    }
+
+    a:focus
+    {
+      outline: none;
+      border: 0;
+    }
+
+    a:hover
+    {
+      outline: none;
+      color: #57a5d4;
+    } 
+
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 15px;
+      line-height: 1.3em;
+      font-weight: normal;
+      font-family: 'Cinzel', serif;
+    }
+    
+    h1 { font-size: 32px; color: #343434; }
+    h1 a { color: #57a5d4; }
+    h2 { font-size: 18px; }
+    h3 { font-size: 14px; }
+
+    ::-moz-selection {
+      background-color: #57a5d4;
+      color: #fff;
+      text-shadow: none;
+    }
+
+    ::selection {
+      background-color: #57a5d4;
+      color: #fff;
+      text-shadow: none;
+    }
+
+    /* -------------------------------------------------- */
+    /*  iconfonts
+    /* -------------------------------------------------- */
+   
+    /* No Icon fonts added to this style sheet */
+
+    /* -------------------------------------------------- */
+    /*  List Types
+    /* -------------------------------------------------- */
+    .list-type-ok li
+    {
+      list-style-type: none;
+      /*background: url('../images/icons/list-type-ok.png') left top no-repeat;*/
+      padding-left: 47px;
+      line-height: 32px;
+      margin-bottom:15px;
+    }
+
+    /* -------------------------------------------------- */
+    /*  Divider
+    /* -------------------------------------------------- */
+    .divider
+    {
+      width: 100%;
+      display: block;
+      height: 2px;
+      background-color: #dedede;
+    }
+
+    /* -------------------------------------------------- */
+    /*  Buttons
+    /* -------------------------------------------------- */
+    .button
+    {
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .button.bordered
+    {
+      background-color: transparent;
+      border: 1px solid #ffffff;
+    }
+    
+  /* ---------------------------------------------------------------------- */
+  /*  03. Header
+  /* ---------------------------------------------------------------------- */
+      
+
+
+  /* ---------------------------------------------------------------------- */
+  /*  04. Top Slider
+  /* ---------------------------------------------------------------------- */
+      #hSlider .item img
+      {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      /* 
+      *  Core Owl Carousel CSS File
+      *  v1.3.3
+      */
+
+      /* clearfix */
+      .owl-carousel .owl-wrapper:after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+      }
+      /* display none until init */
+      .owl-carousel{
+        display: none;
+        position: relative;
+        width: 100%;
+        -ms-touch-action: pan-y;
+      }
+      .owl-carousel .owl-wrapper{
+        display: none;
+        position: relative;
+        -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      .owl-carousel .owl-wrapper-outer{
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+      }
+      .owl-carousel .owl-wrapper-outer.autoHeight{
+        -webkit-transition: height 500ms ease-in-out;
+        -moz-transition: height 500ms ease-in-out;
+        -ms-transition: height 500ms ease-in-out;
+        -o-transition: height 500ms ease-in-out;
+        transition: height 500ms ease-in-out;
+      }
+        
+      .owl-carousel .owl-item{
+        float: left;
+      }
+      .owl-controls .owl-page,
+      .owl-controls .owl-buttons div{
+        cursor: pointer;
+      }
+      .owl-controls {
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+
+      /* mouse grab icon */
+      .grabbing { 
+          cursor:url(grabbing.png) 8 8, move;
+      }
+
+      /* fix */
+      .owl-carousel  .owl-wrapper,
+      .owl-carousel  .owl-item{
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility:    hidden;
+        -ms-backface-visibility:     hidden;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+      }
+
+      /*
+      *   Owl Carousel Owl Demo Theme 
+      * v1.3.3
+      */
+
+      .owl-theme .owl-controls{
+        margin-top: 10px;
+        text-align: center;
+      }
+
+      /* Styling Next and Prev buttons */
+
+      .owl-theme .owl-controls .owl-buttons div{
+        color: #FFF;
+        display: inline-block;
+        zoom: 1;
+        *display: inline;/*IE7 life-saver */
+        margin: 5px;
+        padding: 3px 10px;
+        font-size: 12px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        border-radius: 30px;
+        background: #869791;
+        filter: Alpha(Opacity=50);/*IE7 fix*/
+        opacity: 0.5;
+      }
+      /* Clickable class fix problem with hover on touch devices */
+      /* Use it for non-touch hover action */
+      .owl-theme .owl-controls.clickable .owl-buttons div:hover{
+        filter: Alpha(Opacity=100);/*IE7 fix*/
+        opacity: 1;
+        text-decoration: none;
+      }
+
+      /* Styling Pagination*/
+
+      .owl-theme .owl-controls .owl-page{
+        display: inline-block;
+        zoom: 1;
+        *display: inline;/*IE7 life-saver */
+      }
+      .owl-theme .owl-controls .owl-page span{
+        display: block;
+        width: 12px;
+        height: 12px;
+        margin: 5px 7px;
+        filter: Alpha(Opacity=50);/*IE7 fix*/
+        opacity: 0.5;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        background: #869791;
+      }
+
+      .owl-theme .owl-controls .owl-page.active span,
+      .owl-theme .owl-controls.clickable .owl-page:hover span{
+        filter: Alpha(Opacity=100);/*IE7 fix*/
+        opacity: 1;
+      }
+
+      /* If PaginationNumbers is true */
+
+      .owl-theme .owl-controls .owl-page span.owl-numbers{
+        height: auto;
+        width: auto;
+        color: #FFF;
+        padding: 2px 10px;
+        font-size: 12px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        border-radius: 30px;
+      }
+
+      /* preloading images */
+      .owl-item.loading{
+        min-height: 150px;
+        background: url(AjaxLoader.gif) no-repeat center center
+      }
